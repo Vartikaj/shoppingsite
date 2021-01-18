@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="Fonts/font_awesome/css/all.min.css">
+	<link rel="stylesheet" href="Fonts/font_awesome/css/fontawesome.css">
+	<link href="CSS/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+	window.onload = function(){
+		var all = localStorage.getItem("AllData");
+	   var array = all.split(',');
+	   var blank = array[0];
+	   var id = array[1];
+	   var img = array[2];
+	   var heading = array[3];
+	   var paragaph = array[4];
+	   var price = array[5];
+	   var color = array[6];
+
+		document.getElementById('pheading').innerHTML = heading;
+		document.getElementById('ppara').innerHTML = paragaph;
+
+		//use only src to trnsfer image from one page to another.
+		document.getElementById('leftSide').querySelector('img').src = ""+img+"";
+		document.getElementById('price').innerHTML += price;
+		document.getElementById('color').innerHTML += color;
+	}
+
+	const addtocart = document.getElementsByClassName('addToCart');
+
+        
+    </script>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<section class="left-side">
+				<figure>
+					<!-- <img src=""> -->
+					<h2>ShopNow<i class="fa fa-shopping-bag" aria-hidden="true"></i></h2>
+				</figure>
+			</section>
+			<nav class="right-side">
+				<a href="index.html">Home</a>
+				<a href="#">Product</a>
+				<a href="#">About us</a>
+				<a href="#">Login</a>
+				<a href="#">Sign up</a>
+			</nav>
+		</div>
+	</header>
+	<div class="pdheader">
+		<div class="container">
+			
+		</div>
+	</div>
+    <div class="pmaincontent">
+		<div class="container">
+			<div id="productDetailes">
+				<div id="leftSide">
+					<img src="" alt="productimage">
+				</div>
+				<div id="rightSide">
+					<h2 id="pheading"></h2>
+					<p id="ppara"></p><br/>
+					<span>Price :</span><h4 id="price"></h4><br/>
+					<span>Color :</span><h5 id="color"></h5><br/>
+					<a href="Checkout.html">Add to cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script ></script>
+</body>
+</html>
